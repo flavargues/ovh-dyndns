@@ -3,6 +3,7 @@ bin/
 #configuration files
 .vscode/
 notes/
+docker-compose.yml
 
 # Prerequisites
 *.d

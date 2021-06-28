@@ -1,0 +1,1 @@
+*/5 * * * * /bin/ovh-dyndns.sh
