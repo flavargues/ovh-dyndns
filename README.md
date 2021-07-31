@@ -23,8 +23,6 @@ services:
             ENV IP_VERSION='4'
             #Website to get current public IP
             ENV IP_CHECKER=http://ifconfig.me/ip
-            #Server to check current DNS record
-            ENV NS_SERVER='one.one.one.one'
             #logfile location
             ENV LOG_LOCATION='/var/ip.history'
 ```

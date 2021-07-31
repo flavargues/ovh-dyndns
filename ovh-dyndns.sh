@@ -4,7 +4,7 @@ set -e
 getip ()
 {
     IP=$(curl --silent -$IP_VERSION $IP_CHECKER)
-    OLD_IP=$(dig +short $DOMAIN_NAME $NS_SERVER | head -1)
+    OLD_IP=$(dig +short $DOMAIN_NAME ANY)
 }
 
 getip

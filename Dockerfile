@@ -2,7 +2,6 @@ FROM alpine
 
 ENV IP_VERSION='4'
 ENV IP_CHECKER=http://ifconfig.me/ip
-ENV NS_SERVER='one.one.one.one'
 ENV LOG_LOCATION='/var/ip.history'
 
 ENV DOMAIN_NAME=''
