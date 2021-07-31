@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 set -e
 
 getip ()
@@ -10,8 +10,10 @@ getip ()
 getip
 if [ $IP != $OLD_IP ]; then
     RESPONSE_BODY=$(curl --silent --user "$DYNHOST_ID:$DYNHOST_PASSWORD" "https://www.ovh.com/nic/update?system=dyndns&hostname=$DOMAIN_NAME&myip=$IP")
-    echo "[`date '+%Y-%m-%d %H:%M:%S'`] CHG      $OLD_IP => $IP     \"$RESPONSE_BODY\""
-    echo "[`date '+%Y-%m-%d %H:%M:%S'`] CHG      $OLD_IP => $IP     \"$RESPONSE_BODY\"" >> $LOG_LOCATION
+    FEEDBACK="[`date '+%Y-%m-%d %H:%M:%S'`] CHG      $OLD_IP => $IP     \"$RESPONSE_BODY\""
 else
-    echo "[`date '+%Y-%m-%d %H:%M:%S'`] NO CHG"
+    FEEDBACK="[`date '+%Y-%m-%d %H:%M:%S'`] NO CHG"
 fi
+    echo $FEEDBACK
+    echo $FEEDBACK >> $LOG_LOCATION
+    echo $FEEDBACK >> STDOUT
