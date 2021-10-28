@@ -19,10 +19,12 @@ services:
 ```
 ## Other costumization
 ```
-            #Version 6 not yet supported
+            #Version 6 not supported
             ENV IP_VERSION='4'
+            
             #Website to get current public IP
             ENV IP_CHECKER=http://ifconfig.me/ip
+            
             #logfile location
             ENV LOG_LOCATION='/var/ip.history'
 ```
